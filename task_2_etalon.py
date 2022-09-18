@@ -1,6 +1,3 @@
-"""
-My little Queue
-"""
 from typing import Any
 
 
