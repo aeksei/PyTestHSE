@@ -1,6 +1,6 @@
 import unittest
 
-from task_2 import Queue
+from task_2_etalon import Queue
 
 
 my_queue = Queue()

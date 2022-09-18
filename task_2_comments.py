@@ -1,5 +1,5 @@
 """
-My little Queue
+Добрый день, меня зовут Тимур и я сегодня проверяю твою работу, дам комментарии , где у тебя не совсем верный ход мыслей
 """
 from typing import Any
 
@@ -18,7 +18,7 @@ class Queue:
         :param elem: элемент, который следует добавить в очередь
         :return: None
         """
-        self.queue.insert(0, elem)
+        self.queue.insert(0, elem)     #здесь кроется ошибка, обрати внимание , что надо добавить элемент именно в конец очереди
         return None
 
     def dequeue(self) -> Any:
@@ -29,7 +29,7 @@ class Queue:
         if len(self.queue) == 0:
             return None
 
-        value = self.queue.pop(len(self.queue)-1)
+        value = self.queue.pop(len(self.queue)-1)      #здесь кроется ошибка, обрати внимание , что надо вернуть элемент именно с начала очереди
         return value
 
     def peek(self, ind: int = 0) -> Any:
@@ -38,16 +38,18 @@ class Queue:
         :param ind: индекс элемента с начала очереди
         :return: Просмотренный элемент
         """
-        if ind < 0 or ind > len(self.queue):
+        if ind < 0 or ind > len(self.queue):    #здесь нюанс, что индекс крайнего элемента имеет значение len-1
             return None
 
-        value = self.queue[ind]
+        value = self.queue[ind]                     
         return value
 
     def clear(self) -> None:
         """ Очистить очередь. """
-        if len(self.queue) == 0:
-            return None
+        if len(self.queue) == 0:     #подумай стоит ли вообще писать эти строки
+            return None              #ну и это тоже )
 
-        self.queue.clear()
+        self.queue.clear()      
         return None
+
+# Итак, тебе осталось немного доработать и работа засчитана! Успеха!
